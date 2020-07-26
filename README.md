@@ -22,3 +22,4 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+* am 25.07 habe Devise installiert, es Flexible authentication solution for Rails with Warden
