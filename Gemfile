@@ -31,6 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'bulma-rails', '~> 0.9.0'
 gem 'bulma-extensions-rails', '~> 6.2.7'
+gem 'devise', '=4.7.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
