@@ -81,6 +81,7 @@ class GigsController < ApplicationController
   end
 
   def show
+    @categories = Category.all
   end
 
   def upload_photo
@@ -112,7 +113,7 @@ class GigsController < ApplicationController
   end
 
   def gig_params
-    params.require(:gig).permit(:title, :video, :description, :active, :category_id, :has_single_pricing,
+    params.require(:gig).permit(:title, :video, :description, :active, :category_id, :has_single_pricing, 
                                 pricings_attributes: [:id, :title, :description, :delivery_time, :price, :pricing_type])
   end
 end

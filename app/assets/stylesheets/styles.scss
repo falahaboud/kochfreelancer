@@ -39,7 +39,7 @@ $sides: (top, bottom, left, right);
 
 .star-review {
   color: #ffbf00;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -58,19 +58,4 @@ $sides: (top, bottom, left, right);
   font-weight: 200;
   display: block;
   margin-top: 1.4rem;
-}
-
-.form-container {
-  margin-left: 100px;
-  margin-right: 100px;
-}
-
-.pagination-link.is-current {
-  background-color: #00d1b2 !important;
-  border-color: #00d1b2 !important;
-}
-
-.has-bg-img {
-  background: url('/assets/home/background.jpg') center center;
-  background-size: cover;
 }

@@ -84,6 +84,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    dropzonejs-rails (0.8.5)
+      rails (> 3.1)
     erubi (1.9.0)
     faker (2.13.0)
       i18n (>= 1.6, < 2)
@@ -232,6 +234,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise (= 4.7.2)
+  dropzonejs-rails
   faker (= 2.13.0)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
