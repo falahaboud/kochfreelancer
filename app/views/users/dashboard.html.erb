@@ -179,21 +179,24 @@
 
 
                     <!-- Sample Gig -->
-                    <% current_user.gigs.each do |gig| %>
+                     <% current_user.gigs.each do |gig| %>
 
                         <div class="column is-one-third">
                             <div class="card">
+
                                 <div class="card-image">
-                                        <%= link_to edit_gig_path(gig) do %>
-                                            <figure class="image is-4by3">
-                                                <%= image_tag gig_cover(gig) %>
-                                            </figure>
-                                        <% end %>
+                                    <%= link_to edit_gig_path(gig) do %>
+                                        <figure class="image is-4by3">
+                                            <%= image_tag gig_cover(gig) %>
+                                        </figure>
+                                    <% end %>
                                 </div>
+
                                 <div class="card-content p-t-5 p-b-5">
                                     <p class="subtitle is-6 m-b-5"><%= link_to gig.title, gig_path(gig) %></p>
                                     <span class="star-review"><i class="fa fa-star"></i>
-                                        4.8 <span class="has-text-primary">(23)</span>
+                                        <%= gig.average_rating %>
+                                        <span class="has-text-primary">(<%= gig.reviews.count %>)</span>
                                     </span>                                        
                                 </div>
 
@@ -211,8 +214,10 @@
                                         <% end %>
                                     </a>
                                 </footer>  
+                                
                             </div>
                         </div>
+
                     <% end %>
                 </div>
             </div>

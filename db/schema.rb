@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_182516) do
+ActiveRecord::Schema.define(version: 2020_10_06_114431) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
@@ -95,6 +95,21 @@ ActiveRecord::Schema.define(version: 2020_09_08_182516) do
     t.index ["gig_id"], name: "index_pricings_on_gig_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.text "review"
+    t.integer "stars", default: 1
+    t.uuid "order_id", null: false
+    t.bigint "gig_id"
+    t.bigint "buyer_id"
+    t.bigint "seller_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["buyer_id"], name: "index_reviews_on_buyer_id"
+    t.index ["gig_id"], name: "index_reviews_on_gig_id"
+    t.index ["order_id"], name: "index_reviews_on_order_id"
+    t.index ["seller_id"], name: "index_reviews_on_seller_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -119,4 +134,8 @@ ActiveRecord::Schema.define(version: 2020_09_08_182516) do
   add_foreign_key "orders", "users", column: "buyer_id"
   add_foreign_key "orders", "users", column: "seller_id"
   add_foreign_key "pricings", "gigs"
+  add_foreign_key "reviews", "gigs"
+  add_foreign_key "reviews", "orders"
+  add_foreign_key "reviews", "users", column: "buyer_id"
+  add_foreign_key "reviews", "users", column: "seller_id"
 end

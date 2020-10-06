@@ -6,6 +6,7 @@ class Gig < ApplicationRecord
   has_many :orders
   has_many :orders
   has_many :reviews
+  has_many :reviews
   has_many_attached :photos
   has_rich_text :description
 

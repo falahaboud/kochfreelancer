@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    #@reviews = Review.where(seller_id: params[:id]).order("created_at desc")
+    @reviews = Review.where(seller_id: params[:id]).order("created_at desc")
   end
 
   def update
@@ -23,5 +23,4 @@ class UsersController < ApplicationController
   def current_user_params
     params.require(:user).permit(:from, :about, :status, :language, :avatar)
   end
-  
 end
