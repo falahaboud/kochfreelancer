@@ -38,6 +38,9 @@ gem 'devise', '= 4.7.2'
 
 gem 'omniauth', '= 1.9.1'
 gem 'faker', '= 2.13.0'
+gem 'trestle', '= 0.9.4'
+gem 'trestle-auth', '= 0.4.1'
+gem 'trestle-search', '= 0.4.3'
 
 
 group :development, :test do
