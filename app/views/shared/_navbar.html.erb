@@ -1,7 +1,7 @@
 <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
-            <h1 class="title is-4">Freelancer</h1>
+            <h1 class="title is-4"> FoxCooks</h1>
         </a>
 
         <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -26,8 +26,8 @@
         </div>
 
         <div class="navbar-end">
-            <%= link_to 'Post Gig', new_gig_path, class: "navbar-item" %>
-            <a class="navbar-item">Browse Gigs</a>
+            <%= link_to 'Menu erstellen', new_gig_path, class: "navbar-item" %>
+            <a class="navbar-item">Browse Menu</a>
 
             <% if (!user_signed_in?) %>
                 <div class="navbar-item">
